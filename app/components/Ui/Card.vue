@@ -26,7 +26,7 @@
     transition: all 0.3s ease;
 
     @media screen and (max-width: 550px) {
-        padding: 10px;
+        padding: 7px;
     }
 }
 </style>
