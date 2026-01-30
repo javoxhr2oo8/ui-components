@@ -40,9 +40,7 @@ const appWindowSwitch = ref(false)
                     <Card>
                         <FlexBox gap="20px">
                             <Toggle v-model:toggle="isLightOn" />
-                            <Toggle v-model:toggle="isLightOff" />
                             <Toggle v-model:toggle="isLightSquare" :square="true" />
-                            <Toggle v-model:toggle="isLightSquareOff" :square="true" />
                         </FlexBox>
                     </Card>
 
