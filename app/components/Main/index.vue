@@ -24,6 +24,7 @@ const appWindowSwitch = ref(false)
                 <FlexBox direction="column" gap="10px">
                     <Card>
                         <FlexBox gap="5px">
+                            <Button width="fit-content" class="search-btn"><i class="fas fa-bars"></i></Button>
                             <Button width="fit-content" class="search-btn"><i class="fas fa-search"></i></Button>
                             <Input placeholder="Search" icon="fas fa-search" />
                         </FlexBox>
