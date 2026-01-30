@@ -47,7 +47,7 @@ button {
     }
 
     @media screen and (max-width: 550px) {
-        width: 75px;
+        width: 65px;
         span {
             width: 20px;
             height: 20px;
@@ -57,17 +57,21 @@ button {
 
 .active {
     background: linear-gradient(135deg, rgba(120, 44, 246, 0.4), rgba(120, 44, 246, 0.2));
+    @media screen and (max-width: 550px) {
+        width: 65px;
+    }
 
     span {
-        margin-left: 40px;
+        margin-left: 28px;
     }
+
 }
 
 .square {
     border-radius: 10px;
 
     span {
-        border-radius: 10px;
+        border-radius: 5px;
     }
 }
 </style>

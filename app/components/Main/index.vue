@@ -36,6 +36,16 @@ const appWindowSwitch = ref(false)
                         </Card>
                     </GridBox>
 
+
+                    <Card>
+                        <FlexBox gap="20px">
+                            <Toggle v-model:toggle="isLightOn" />
+                            <Toggle v-model:toggle="isLightOff" />
+                            <Toggle v-model:toggle="isLightSquare" :square="true" />
+                            <Toggle v-model:toggle="isLightSquareOff" :square="true" />
+                        </FlexBox>
+                    </Card>
+
                     <GridBox class="elements-box" v-if="false">
                         <Card>
                             <FlexBox gap="20px">
