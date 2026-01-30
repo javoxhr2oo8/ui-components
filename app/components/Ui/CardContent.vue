@@ -11,7 +11,7 @@ const { item } = defineProps(['item'])
          <img src="https://miro.medium.com/v2/resize:fit:1200/1*qrHM3MBWI4LlWJdtFkR5CA.jpeg" alt="">
         <h2>{{ item }}. Card content</h2>
         <p>
-            20$
+            200 000 uzs
         </p>
         <Button>
             Buy now
