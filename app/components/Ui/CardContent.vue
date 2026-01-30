@@ -7,7 +7,7 @@ const { item } = defineProps(['item'])
 
 <template>
     <FlexBox direction="column" gap="10px">
-        <NuxtImg src="https://miro.medium.com/v2/resize:fit:1358/format:webp/1*yX9aGsJUaXS-ViU5gCpQEw.jpeg" />
+        <NuxtImg src="https://miro.medium.com/v2/resize:fit:1200/1*qrHM3MBWI4LlWJdtFkR5CA.jpeg" />
         <h2>{{ item }}. Card content</h2>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit
