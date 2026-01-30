@@ -1,9 +1,9 @@
 <script setup>
-const { color, bg, loading = false } = defineProps(['color', 'bg', 'loading'])
+const { color, bg, loading = false, width } = defineProps(['color', 'bg', 'loading', 'width'])
 </script>
 
 <template>
-    <button :style="{ 'color': color, 'background': bg }">
+    <button :style="{ 'color': color, 'background': bg, 'width': width ? width : '100%' }">
         <slot v-if="!loading"/>
         <div class="lds-ring" v-if="loading">
             <div></div>

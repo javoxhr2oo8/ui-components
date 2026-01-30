@@ -38,6 +38,9 @@ const onInput = (e) => {
         font-size: 18px;
         background: transparent;
         color: #ccc;
+        @media screen and (max-width: 550px) {
+            padding: 18px;
+        }
     }
 }
 </style>

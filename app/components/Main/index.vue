@@ -23,7 +23,10 @@ const appWindowSwitch = ref(false)
 
                 <FlexBox direction="column" gap="10px">
                     <Card>
-                        <Input placeholder="Qidiruv" icon="fas fa-search" />
+                        <FlexBox gap="5px">
+                            <Button width="fit-content" class="search-btn"><i class="fas fa-search"></i></Button>
+                            <Input placeholder="Search" icon="fas fa-search" />
+                        </FlexBox>
                     </Card>
 
                     <GridBox>
@@ -59,5 +62,10 @@ const appWindowSwitch = ref(false)
 <style lang="scss" scoped>
 main {
     padding: 20px 0;
+}
+
+.search-btn {
+    padding-left: 15px;
+    padding-right: 15px;
 }
 </style>
