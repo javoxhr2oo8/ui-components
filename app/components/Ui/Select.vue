@@ -13,7 +13,6 @@ const props = defineProps({
     }
 });
 
-// Добавили toggle, чтобы родительская карточка знала, когда "всплывать"
 const emit = defineEmits(['update:modelValue', 'toggle']);
 
 const isOpen = ref(false);
@@ -21,20 +20,20 @@ const rootRef = ref(null);
 
 const toggleDropdown = () => {
     isOpen.value = !isOpen.value;
-    emit('toggle', isOpen.value); // Передаем состояние наверх
+    emit('toggle', isOpen.value);
 };
 
 const selectOption = (option) => {
     emit('update:modelValue', option.value);
     isOpen.value = false;
-    emit('toggle', false); // Закрыли — опустили карточку
+    emit('toggle', false);
 };
 
 const handleClickOutside = (event) => {
     if (rootRef.value && !rootRef.value.contains(event.target)) {
         if (isOpen.value) {
             isOpen.value = false;
-            emit('toggle', false); // Кликнули мимо — опустили карточку
+            emit('toggle', false);
         }
     }
 };
@@ -69,7 +68,7 @@ const selectedLabel = () => {
 <style lang="scss" scoped>
 .custom-select {
     position: relative;
-    width: 250px;
+    width: 100%;
     font-family: 'Inter', sans-serif;
     user-select: none;
     outline: none;
@@ -84,7 +83,6 @@ const selectedLabel = () => {
     cursor: pointer;
     transition: all 0.3s ease;
 
-    // Чистое матовое стекло
     background: rgba(255, 255, 255, 0.05);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
@@ -107,7 +105,7 @@ const selectedLabel = () => {
     left: 0;
     right: 0;
 
-    background: rgba(71, 71, 71, 0.726);
+    background: #1d1d1db9;
     backdrop-filter: blur(50px) saturate(150%);
     -webkit-backdrop-filter: blur(50px) saturate(150%);
 
@@ -131,13 +129,14 @@ const selectedLabel = () => {
 }
 
 .select-options li {
-    padding: 12px 16px;
+    padding: 12px 13px;
     margin-bottom: 2px;
     color: rgba(255, 255, 255, 0.9);
     cursor: pointer;
     border-radius: 8px;
     transition: all 0.2s;
     font-weight: 600;
+    border-bottom: 1px solid rgba(163, 163, 163, 0.089);
 
     &:hover {
         background: rgba(255, 255, 255, 0.1);
@@ -150,17 +149,24 @@ const selectedLabel = () => {
     }
 }
 
-/* Анимация появления (Fade + Slide) */
 .fade-enter-active,
 .fade-leave-active {
-    // transition: всё меняется за 0.3 секунды с мягким замедлением
     transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.arrow {
+    font-size: 10px;
+    transition: transform 0.3s ease;
+    display: inline-block;
+}
+
+.arrow.rotate {
+    transform: rotate(180deg);
 }
 
 .fade-enter-from,
 .fade-leave-to {
     opacity: 0;
-    // Начинает чуть выше своего места (-10px), создавая эффект падения
     transform: translateY(-12px) scale(0.95);
 }
 

@@ -16,13 +16,69 @@ const isLightSquareOff = ref(true);
 
 const appWindowSwitch = ref(false)
 
-const selectedCity = ref('');
+const selectedCollection = ref('');
 const isCityOpen = ref(false);
-const cities = [
-    { label: 'Москва', value: 'msk' },
-    { label: 'Бишкек', value: 'spb' },
-    { label: 'Ташкент', value: 'tash' }
+const collections = [
+    { label: 'iPhone', value: 'phone' },
+    { label: 'iPad', value: 'pad' },
+    { label: 'iPod', value: 'm3' },
+    { label: 'Airpods', value: 'garniture' },
+    { label: 'Apple watch', value: 'watch' },
+    { label: 'Mac book', value: 'laptop' },
 ];
+
+const selectedModel = ref('');
+const models = [
+    {
+        label: "Iphone 7",
+        value: "iphone 7"
+    },
+
+    {
+        label: "Iphone 8",
+        value: "iphone 8"
+    },
+
+    {
+        label: "Iphone 8+",
+        value: "iphone 8+"
+    },
+
+    {
+        label: "Iphone x",
+        value: "iphone x"
+    },
+
+    {
+        label: "Iphone 11",
+        value: "iphone 11"
+    },
+
+    {
+        label: "Iphone 12",
+        value: "iphone 12"
+    },
+
+    {
+        label: "Iphone 13",
+        value: "iphone 13"
+    },
+
+    {
+        label: "Iphone 14",
+        value: "iphone 14"
+    },
+
+    {
+        label: "Iphone 15",
+        value: "iphone 15"
+    },
+
+    {
+        label: "Iphone 16",
+        value: "iphone 16"
+    },
+]
 </script>
 
 <template>
@@ -41,9 +97,9 @@ const cities = [
 
                     <Card :style="{ zIndex: isCityOpen ? 100 : 1 }">
                         <FlexBox gap="10px">
-                            <Select v-model="selectedCity" :options="cities" placeholder="Collection"
+                            <Select v-model="selectedCollection" :options="collections" placeholder="Collection"
                                 @toggle="(val) => isCityOpen = val" />
-                            <Select v-model="selectedCity" :options="cities" placeholder="Model"
+                            <Select v-model="selectedModel" :options="models" placeholder="Model"
                                 @toggle="(val) => isCityOpen = val" />
                         </FlexBox>
                     </Card>
