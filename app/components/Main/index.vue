@@ -7,6 +7,7 @@ import FlexBox from '../Ui/FlexBox.vue';
 import Button from '../Ui/Button.vue';
 import window from '../AppWindow/window.vue';
 import Input from '../Ui/Input.vue';
+import Select from '../Ui/Select.vue';
 
 const isLightOn = ref(false);
 const isLightOff = ref(true);
@@ -14,6 +15,14 @@ const isLightSquare = ref(false);
 const isLightSquareOff = ref(true);
 
 const appWindowSwitch = ref(false)
+
+const selectedCity = ref('');
+const isCityOpen = ref(false);
+const cities = [
+    { label: 'Москва', value: 'msk' },
+    { label: 'Бишкек', value: 'spb' },
+    { label: 'Ташкент', value: 'tash' }
+];
 </script>
 
 <template>
@@ -27,6 +36,15 @@ const appWindowSwitch = ref(false)
                             <Button width="fit-content" class="search-btn"><i class="fas fa-bars"></i></Button>
                             <Button width="fit-content" class="search-btn"><i class="fas fa-search"></i></Button>
                             <Input placeholder="Search" icon="fas fa-search" />
+                        </FlexBox>
+                    </Card>
+
+                    <Card :style="{ zIndex: isCityOpen ? 100 : 1 }">
+                        <FlexBox gap="10px">
+                            <Select v-model="selectedCity" :options="cities" placeholder="Collection"
+                                @toggle="(val) => isCityOpen = val" />
+                            <Select v-model="selectedCity" :options="cities" placeholder="Model"
+                                @toggle="(val) => isCityOpen = val" />
                         </FlexBox>
                     </Card>
 
