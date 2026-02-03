@@ -36,7 +36,7 @@ button {
     justify-content: flex-start;
     transition: all .2s ease;
     outline: none;
-
+    -webkit-tap-highlight-color: transparent;
     span {
         width: 30px;
         height: 30px;
@@ -57,14 +57,15 @@ button {
 
 .active {
     background: linear-gradient(135deg, rgba(120, 44, 246, 0.4), rgba(120, 44, 246, 0.2));
+    span {
+        margin-left: 37px;
+    }
     @media screen and (max-width: 550px) {
         width: 65px;
-    }
-
     span {
         margin-left: 28px;
     }
-
+    }
 }
 
 .square {
