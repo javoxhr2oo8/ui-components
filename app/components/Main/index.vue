@@ -8,6 +8,7 @@ import Button from '../Ui/Button.vue';
 import window from '../AppWindow/window.vue';
 import Input from '../Ui/Input.vue';
 import Select from '../Ui/Select.vue';
+import Accordion from '../Ui/Accordion.vue';
 
 const isLightOn = ref(false);
 const isLightOff = ref(true);
@@ -79,6 +80,25 @@ const models = [
         value: "iphone 16"
     },
 ]
+
+
+const faq = [
+  { 
+    title: 'Настройки профиля', 
+    content: 'Здесь вы можете изменить свой пароль и аватар.', 
+    icon: 'fa-gear' 
+  },
+  { 
+    title: 'Статус доставки', 
+    content: 'Ваш заказ уже в пути и прибудет в течение 3 дней.', 
+    icon: 'fa-truck' 
+  },
+  { 
+    title: 'Техподдержка', 
+    content: 'Мы работаем 24/7. Напишите нам в чат.', 
+    icon: 'fa-life-ring' 
+  }
+]
 </script>
 
 <template>
@@ -123,6 +143,8 @@ const models = [
                             <Toggle v-model:toggle="isLightSquare" :square="true" />
                         </FlexBox>
                     </Card>
+
+                    <Accordion :items="faq"/>
 
                     <GridBox class="elements-box" v-if="false">
                         <Card>

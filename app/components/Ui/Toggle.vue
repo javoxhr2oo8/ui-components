@@ -56,7 +56,8 @@ button {
 }
 
 .active {
-    background: linear-gradient(135deg, rgba(120, 44, 246, 0.4), rgba(120, 44, 246, 0.2));
+    // background: linear-gradient(135deg, rgba(120, 44, 246, 0.4), rgba(120, 44, 246, 0.2));
+    background: #1c631c;
     span {
         margin-left: 37px;
     }
