@@ -95,6 +95,14 @@ const models = [
                         </FlexBox>
                     </Card>
 
+                    <Card>
+                        <FlexBox gap="10px">
+                            <Button><i class="fas fa-unlock"></i>Garant</Button>
+                            <Button><i class="fas fa-cog"></i>Settings</Button>
+                            <Button><i class="fas fa-headset"></i>Support</Button>
+                        </FlexBox>
+                    </Card>
+
                     <Card :style="{ zIndex: isCityOpen ? 100 : 1 }">
                         <FlexBox gap="10px">
                             <Select v-model="selectedCollection" :options="collections" placeholder="Collection"
@@ -109,7 +117,6 @@ const models = [
                             <CardContent :item="item" />
                         </Card>
                     </GridBox>
-
 
                     <Card>
                         <FlexBox gap="20px">
