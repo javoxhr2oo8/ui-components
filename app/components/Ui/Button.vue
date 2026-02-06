@@ -21,7 +21,8 @@ button {
     font-weight: 600;
     font-size: 17px;
     border-radius: 12px;
-    background: linear-gradient(135deg, rgba(120, 44, 246, 0.4), rgba(120, 44, 246, 0.2));
+    // background: linear-gradient(135deg, rgba(120, 44, 246, 0.4), rgba(120, 44, 246, 0.2));
+    background: transparent;
     color: #fff;
     cursor: pointer;
 

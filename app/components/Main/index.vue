@@ -99,7 +99,6 @@ const models = [
                         <FlexBox gap="10px">
                             <Button><i class="fas fa-unlock"></i>Garant</Button>
                             <Button><i class="fas fa-cog"></i>Settings</Button>
-                            <Button><i class="fas fa-headset"></i>Support</Button>
                         </FlexBox>
                     </Card>
 
