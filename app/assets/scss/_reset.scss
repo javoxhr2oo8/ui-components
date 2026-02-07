@@ -8,12 +8,18 @@
 html {
     height: 100%;
     scroll-behavior: smooth;
+    background: #1e1f20;
+}
+
+html.dark {
+  background: #000000;
+  color: white;
 }
 
 body {
     height: 100%;
     // background: #020618;
-    background: #000000;
+    // background: #000000;
 }
 
 .container {

@@ -81,23 +81,22 @@ const models = [
     },
 ]
 
-
 const faq = [
-  { 
-    title: 'Настройки профиля', 
-    content: 'Здесь вы можете изменить свой пароль и аватар.', 
-    icon: 'fa-gear' 
-  },
-  { 
-    title: 'Статус доставки', 
-    content: 'Ваш заказ уже в пути и прибудет в течение 3 дней.', 
-    icon: 'fa-truck' 
-  },
-  { 
-    title: 'Техподдержка', 
-    content: 'Мы работаем 24/7. Напишите нам в чат.', 
-    icon: 'fa-life-ring' 
-  }
+    {
+        title: 'Настройки профиля',
+        content: 'Здесь вы можете изменить свой пароль и аватар.',
+        icon: 'fa-gear'
+    },
+    {
+        title: 'Статус доставки',
+        content: 'Ваш заказ уже в пути и прибудет в течение 3 дней.',
+        icon: 'fa-truck'
+    },
+    {
+        title: 'Техподдержка',
+        content: 'Мы работаем 24/7. Напишите нам в чат.',
+        icon: 'fa-life-ring'
+    }
 ]
 </script>
 
@@ -118,7 +117,9 @@ const faq = [
                     <Card>
                         <FlexBox gap="10px">
                             <Button><i class="fas fa-unlock"></i>Garant</Button>
-                            <Button><i class="fas fa-cog"></i>Settings</Button>
+                            <NuxtLink to="/settings">
+                                <Button><i class="fas fa-cog"></i>Settings</Button>
+                            </NuxtLink>
                         </FlexBox>
                     </Card>
 
@@ -138,13 +139,19 @@ const faq = [
                     </GridBox>
 
                     <Card>
+                        <Button>
+                            More products
+                        </Button>
+                    </Card>
+
+                    <Card>
                         <FlexBox gap="20px">
                             <Toggle v-model:toggle="isLightOn" />
                             <Toggle v-model:toggle="isLightSquare" :square="true" />
                         </FlexBox>
                     </Card>
 
-                    <Accordion :items="faq"/>
+                    <Accordion :items="faq" />
 
                     <GridBox class="elements-box" v-if="false">
                         <Card>
@@ -173,6 +180,11 @@ const faq = [
 <style lang="scss" scoped>
 main {
     padding: 20px 0;
+}
+
+a {
+    width: 100%;
+    text-decoration: none;
 }
 
 .search-btn {
